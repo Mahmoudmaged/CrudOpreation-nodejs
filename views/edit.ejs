@@ -1,0 +1,18 @@
+
+    <%- include('./header.ejs') %> 
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+      <div class="container py-5 ">
+        <form class="w-75 m-auto py-5 my-2" action="/updateProduct/<%= result[0].id %>" method="POST" >
+            <input value="<%= result[0].title %> " placeholder="Enter your artical name" class="form-control mt-2" name="title" type="text">
+            <input value="<%= result[0].description %> " placeholder="Enter your artical Description" class="form-control mt-2" name="description" type="text">
+            <div class=" text-center">
+              <button  class="btn btn-success w-25 mt-3 mx-auto ">Update</button>
+            </div>
+        </form>
+          
+      </div>
+  
+       
+    <%- include('./footer.ejs') %> 

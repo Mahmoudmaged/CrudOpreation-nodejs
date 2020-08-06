@@ -1,0 +1,23 @@
+
+    <%- include('./header.ejs') %> 
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  
+  <div class="container py-5 ">
+       
+    <div class="row py-5 justify-content-center align-items-center">
+      <% for(var i=0 ; i < result.length ; i++){%>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-center"><%= result[i].title%></h5>
+                <p class="card-text article<%=i%>"><%= result[i].description%></p>
+             
+              </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+</div>
+    <%- include('./footer.ejs') %> 
